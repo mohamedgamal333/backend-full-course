@@ -35,3 +35,13 @@ Lesson
 A tutorial provides one possible path.
 
 Real-world development requires understanding the problem and finding an appropriate solution when that path doesn't work.
+
+
+
+Another something that make me search why we use --watch instead of nodemon in package.json, as we know nodemon is famous and older than --watch but the nodemon is a package out of node we need to download and add to dependency but NodeJS provides --watch inside it.
+
+
+--env-fiel=.env when i searched about it and why we use in the past dotenv was used and need to install and add dependency but now NodeJs support --enc-file=.env we didn't need to install packages for just reading .env file.
+
+we add type module in package json file as it help you and terminal to understand that we use ESModules instead of CommandJS    
+

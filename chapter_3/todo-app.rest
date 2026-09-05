@@ -1,0 +1,44 @@
+### GET /
+GET http://localhost:5000 
+### Register a new user POST /auth/register
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "username": "mohamed123@gmail.com",
+    "password": "123456"
+}
+### Login a user POST /auth/login
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "username": "mohamed123@gmail.com",
+    "password": "123456"
+}
+
+### Fetch all todos for a specific user GET /todos(protected)
+GET http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzg4NTg2MDIwLCJleHAiOjE3ODg2NzI0MjB9.voVTD1WjXnNQCNDKwXTyAdzN-XNoJWnXHeJb1-32Ndw
+### create a new todo POST /todos(protected)
+POST http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzg4NTg2MDIwLCJleHAiOjE3ODg2NzI0MjB9.voVTD1WjXnNQCNDKwXTyAdzN-XNoJWnXHeJb1-32Ndw
+Content-Type: application/json
+
+{
+    "task": "finish learning coding in this Node.js project"
+}
+
+
+### Update a specific todo PUT /todos/:id(protected)
+PUT http://localhost:5000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzg4NTg2MDIwLCJleHAiOjE3ODg2NzI0MjB9.voVTD1WjXnNQCNDKwXTyAdzN-XNoJWnXHeJb1-32Ndw
+Content-Type: application/json
+
+{
+    "task": "finish learning coding in this Node.js project",
+    "completed": 1
+}
+### Delete a specific todo DELETE /todos/:id(protected)
+DELETE  http://localhost:5000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzg4NTg2MDIwLCJleHAiOjE3ODg2NzI0MjB9.voVTD1WjXnNQCNDKwXTyAdzN-XNoJWnXHeJb1-32Ndw
